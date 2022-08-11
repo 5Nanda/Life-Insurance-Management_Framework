@@ -1,5 +1,5 @@
 package com.crm.framework.LifeInsuranceManagement;
 
-public class trialpush {
- //Good Morning
+public class CreateNominee {
+
 }
