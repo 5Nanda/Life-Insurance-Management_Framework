@@ -8,6 +8,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -359,4 +360,9 @@ public class WebDriverUtility {
 		JavascriptExecutor javaScript = (JavascriptExecutor)driver;
 		javaScript.executeScript("window.scrollBy(0,500)");
 	}
+	public WebElement addLinkTextToXpath(WebDriver driver,String text,String action) {
+		WebElement element=driver.findElement(By.xpath("//td[text()='"+text+"']/..//a[text()='"+action+"']"));
+		return element;
+	}
+	
 }
