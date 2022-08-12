@@ -14,6 +14,8 @@ public class AddClientPage {
 	}
 	
 	//declaration
+	@FindBy(xpath="//input[@name='client_id']") private WebElement ClientIdEdt;
+	
 	@FindBy(xpath = "//input[@name='client_password']")private WebElement clientpasswordTF;
 	
 	@FindBy(xpath = "//input[@name='name']")private WebElement clientnameTF;
@@ -126,6 +128,12 @@ public class AddClientPage {
 		nomineephonenumberTF.sendKeys(nomineephonenumber);
 		Thread.sleep(2000);
 	}
+	
+	public String getClientId() {
+		String clientId = ClientIdEdt.getAttribute("value");
+		return clientId;
+	}
+	
 	public void Submitbutton() throws InterruptedException 
 	{
 		submitbutton.click();
